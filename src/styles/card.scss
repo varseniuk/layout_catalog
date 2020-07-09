@@ -1,18 +1,35 @@
 .product {
   display: flex;
   flex-direction: column;
+  align-items: center;
   max-width: 200px;
   height: 403px;
   margin: 0 24px 50px;
-  padding: 30px 14px 14px;
+  padding: 0 14px;
   box-sizing: border-box;
-  border: 1px solid #f3f3f3;
+  border: 1px solid $border-color;
   border-radius: 5px;
 
   &__image {
     width: 160px;
     height: 134px;
-    margin: 0 5px 45px;
+    margin: 30px 0;
+    outline: 3px solid transparent;
+    transition: transform 1s, padding 1s, margin-top 1s;
+
+    &:hover {
+      outline-color: $border-color;
+      transform: scale(1.2);
+      padding: 15px 0;
+      margin-top: 15px;
+    }
+
+    &-container {
+      display: flex;
+      justify-content: center;
+      height: 209px;
+      width: 160px;
+    }
   }
 
   &__description {
@@ -24,10 +41,12 @@
   &__code {
     @include small-text;
     margin: 0 0 15px;
+    align-self: flex-start;
   }
 
   &__rating {
     display: flex;
+    align-self: stretch;
     justify-content: space-between;
     align-items: center;
     height: 15px;
@@ -45,6 +64,7 @@
 
   &__value {
     display: flex;
+    align-self: stretch;
     justify-content: space-between;
     align-items: baseline;
     margin: 0 0 20px;
@@ -75,6 +95,7 @@
     text-transform: uppercase;
     font-weight: bold;
     font-size: 14px;
+    transition: 1s;
   }
 
   &__button:hover {
