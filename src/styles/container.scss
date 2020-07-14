@@ -3,5 +3,5 @@
   grid-template-columns: repeat(auto-fill, $card-width);
   column-gap: $card-gap;
   justify-content: center;
-  width: 4 * $card-width + 4 * $card-gap;
+  width: 4 * $card-width + 3 * $card-gap;
 }
